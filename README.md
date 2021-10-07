@@ -1,7 +1,7 @@
 # password-generator
 
 # Project Title: Password Generator JavaScript Exercise
-![password display](assets/images/03-javascript-homework-demo.png)
+![password display](assets/03-javascript-homework-demo.png)
 ## Description
 This application project will generate a random password from 8 to 128 char in length.  It considers user selected criteria with an assortment of uppercase, numeric and special characters. The app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code. 
 
