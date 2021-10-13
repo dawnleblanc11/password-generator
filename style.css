@@ -9,7 +9,7 @@ body,
 .wrapper {
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 
 body {
@@ -40,6 +40,7 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  border: 5px solid hsl(360, 91%, 36%);
 }
 
 .card-header::after {
