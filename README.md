@@ -32,6 +32,16 @@ Revisions Dawn LeBlanc 10-2021
 
 ## Version History
 1.0 Initialize Code
+1.1 Update READme
+1.2 Testing Git connection
+1.3 Vase Challenge Code
+1.4 Add Screenshot to README
+1.5 User Input Screens
+1.6 Fisher Yates Randomization and Unicodes
+1.7 Create Random arrays based on user input
+1.8 Revert to Office Hours Randomizaton Method
+1.9 Password Function and Write Changes
+1.10 READme updates
 
 
 
@@ -41,3 +51,4 @@ Revisions Dawn LeBlanc 10-2021
 N/A
 
 ## Acknowledgements
+source of special charaters unicode https://owasp.org/www-community/password-special-characters
