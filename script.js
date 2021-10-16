@@ -6,7 +6,7 @@ var generateBtn = document.getElementById('generate');
 // User will be asked first what length they would like their password to be
 // Send an error message if outside range
 // Then verify via click ok on prompt if they want Upper, Lower, Numeric or Special Characters
-
+function userpromts( ){
 // Record the password length the user selects- restricted between 8-128 in userpwLength
 var userpwLength = window.prompt(
   "Please choose a password length between 8 and 128 characters:"
@@ -30,9 +30,13 @@ if (userpwLength > 128 || userpwLength < 8) {
     "For a stronger password, would you like to include special characters?"
   );
 }
+
+
 if (userpwUpper + userpwLower + userpwNumeric + userpwSpecial === 0) {
   window.alert("Please select at least one character type");
 }
+
+};
 
 const randomFunc = {
   upper: generateRandomUpper,
@@ -83,13 +87,13 @@ function generateRandomSpecial( ) {
 
 
 // Write password to the #password input
-  function writePassword() {
-  document.createElement('span')
+  function writePassword() {;
+  document.createElement('span');
   passwordEl.innerHTML = generatePassword();
   var passwordText = document.querySelector("password");
   }
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword());
+generateBtn.addEventListener("click", userpromts);
 
 writePassword();
 
