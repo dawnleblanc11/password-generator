@@ -48,6 +48,7 @@ const randomFunc = {
   special: generateRandomSpecial,
 };
 
+
 function generatePassword(upper, lower, numeric, special, length) {
   let generatedPassword = "";
   const typesCount = upper + lower + numeric + special;
@@ -66,7 +67,10 @@ function generatePassword(upper, lower, numeric, special, length) {
   const finalPassword = generatedPassword.slice(0, length);
 
   return finalPassword;
+ 
 }
+
+test = generatePassword();
 
 // define arrays from table of ASCI information or special characters
 // randomize selction
@@ -124,14 +128,9 @@ function generateRandomSpecial() {
 // Write password to the #password input
 function writePassword() {
   userpromts();
-  document.createElement('SPAN');
-  passwordEl.innerHTML = generatePassword();
-  
-
-  //generatePassword( );
- // document.querySelector("password");
- // var password = document.createElement('SPAN');
-//  passwordEl.innerHTML = generatePassword();
-};
+  generatePassword();
+  console.log(test);
+  passwordEl.innerHTML = `test${test}`;
+  };
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
