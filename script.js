@@ -46,11 +46,18 @@ function generatePassword() {
   let lower = userpwLower;
   let numeric = userpwNumeric;
   let special = userpwSpecial;
-  let length = userpwLength;
+  let length = + userpwLength;
   
   let generatedPassword = " ";
+  passwordEl.innerHTML += " ";
+  
 
   const typesCount = upper + lower + numeric + special;
+  
+  if (typesCount === 0) {
+    return 'can not create password';
+  }
+
   const typesArr = [{ upper }, { lower }, { numeric }, { special }].filter(
     (item) => Object.values(item)[0]
   );
@@ -58,12 +65,12 @@ function generatePassword() {
   // create a loop
   for (let i = 0; i < length; i += typesCount) {
     typesArr.forEach((type) => {
-      const typeName = Object.keys(type)[0];
-      generatedPassword += randomFunc[typeName]();
+      const funcName = Object.keys(type)[0];
+      generatedPassword += randomFunc[funcName]();
     });
   }
 
-  const finalPassword = generatedPassword.slice(0, length);
+  const finalPassword = generatedPassword.slice(0,(length+1));
   // Write password to the #password input
   passwordEl.innerHTML += finalPassword;
 }
@@ -84,7 +91,7 @@ function generateRandomNumeric() {
 }
 
 function generateRandomSpecial() {
-  const special = ["\u0020","\u0021","\u0022","\u0023","\u0024","\u0025","\u0026","\u0027","\u0028","\u0029",
+  const special = ["\u0021","\u0022","\u0023","\u0024","\u0025","\u0026","\u0027","\u0028","\u0029",
     "\u002A","\u002B","\u002C","\u002D","\u002E","\u002F","\u003B","\u003C","\u003D","\u003E","\u003F","\u005B","\u005C","\u005D","\u005E","\u0060","\u007B","\u007C","\u007D","\u007E",];
   return special[Math.floor(Math.random() * special.length)];
 }
