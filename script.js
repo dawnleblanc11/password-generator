@@ -75,6 +75,7 @@ function generatePassword() {
   passwordEl.innerHTML += finalPassword;
 }
 
+}
 // define arrays from table of ASCI information or special characters
 // randomize selection
 
