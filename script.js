@@ -9,6 +9,7 @@ const randomFunc = {
 };
 
 function generatePassword() {
+  passwordEl.innerHTML = "your secure password is: ";
   // Per AboutME: via a series of prompts
   // User will be asked first what length they would like their password to be
   // Send an error message if outside range
