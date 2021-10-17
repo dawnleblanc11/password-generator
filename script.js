@@ -13,12 +13,6 @@ var generateBtn = document.getElementById("generate");
 // let length;
 
 
-  
-   
-   
-
-
-
 const randomFunc = {
   upper: generateRandomUpper,
   lower: generateRandomLower,
@@ -26,8 +20,8 @@ const randomFunc = {
   special: generateRandomSpecial,
 };
 
-
 function generatePassword() {
+
 // Record the password length the user selects- restricted between 8-128 in userpwLength
 var userpwLength = window.prompt(
   "Please choose a password length between 8 and 128 characters:"
@@ -61,17 +55,12 @@ if (userpwUpper + userpwLower + userpwNumeric + userpwSpecial === 0) {
    let length=userpwLength;
 
   let generatedPassword = " ";
-  console.log("upper",upper);
-   console.log("lower",lower);
-   console.log("numeric",numeric);
-   console.log("special",special);
-   console.log("length",length);
+
   const typesCount = upper + lower + numeric + special;
-  console.log(typesCount);
   const typesArr = [{ upper }, { lower }, { numeric }, { special }].filter(
     (item) => Object.values(item)[0]
   );
-  console.log(typesArr);
+
   // create a loop
   for (let i = 0; i < length; i += typesCount) {
     typesArr.forEach((type) => {
@@ -81,14 +70,10 @@ if (userpwUpper + userpwLower + userpwNumeric + userpwSpecial === 0) {
   }
 
   const finalPassword = generatedPassword.slice(0, length);
-  console.log(finalPassword);
+  // Write password to the #password input
   passwordEl.innerHTML += finalPassword;
 
-
 }
-
-
-
 // define arrays from table of ASCI information or special characters
 // randomize selction
 
@@ -141,11 +126,6 @@ function generateRandomSpecial() {
 }
 //use the unicodes for special characters to avoid syntax problems in the array
 //source of special charaters unicode https://owasp.org/www-community/password-special-characters
-
-// Write password to the #password input
-function writePassword() {
-  
-  };
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
