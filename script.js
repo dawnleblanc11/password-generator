@@ -41,7 +41,10 @@ function generatePassword() {
   if (userpwUpper + userpwLower + userpwNumeric + userpwSpecial === 0) {
     window.alert("Please select at least one character type");
   }
-
+  if (isNaN(userpwLength)===true)  {
+    window.alert("Please select a number for your password length");
+  }
+  
   
   let upper = userpwUpper;
   let lower = userpwLower;
@@ -53,10 +56,6 @@ function generatePassword() {
   
 
   const typesCount = upper + lower + numeric + special;
-  
-  if (typesCount === 0) {
-    return 'can not create password';
-  }
 
   const typesArr = [{ upper }, { lower }, { numeric }, { special }].filter(
     (item) => Object.values(item)[0]
