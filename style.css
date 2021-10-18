@@ -69,7 +69,7 @@ header {
 
 .card-footer::after {
   content: " ";
-  display: block;
+  display: flex;
   clear: both;
 }
 
@@ -115,8 +115,7 @@ button[disabled] {
   margin-bottom: 10px;
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
-  resize: none;
-  overflow: hidden;
+
 }
 
 @media (max-width: 690px) {
@@ -132,6 +131,14 @@ button[disabled] {
 }
 
 @media (max-width: 500px) {
+  .card-header {
+   font-size: 10px;
+  }
+
+  .header {
+    font-size: 10px;
+  }
+
   .btn {
     font-size: 0.8rem;
   }

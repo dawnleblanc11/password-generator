@@ -42,7 +42,7 @@ function generatePassword() {
     window.alert("Please select at least one character type");
   }
   if (isNaN(userpwLength)===true)  {
-    window.alert("Please select a number for your password length");
+    window.alert("Please select a <u>NUMBER<u> for your password length");
   }
   
   
